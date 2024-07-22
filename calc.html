@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            
+            height: 50px;
+            width: 100px;
+            background-color: powderblue;
+            color: white;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div aria-colspan="2">
+        <input type="text" style="height: 50px; width: 300px; margin-left: 20px;">
+        <input type="button" value="c">
+    </div>
+    <div style="margin:15px; padding: 1px;">
+        <input type="button" value="7">
+        <input type="button" value="8">
+        <input type="button" value="9">
+        <input type="button" value="+">
+    </div>
+
+    <div style="margin:15px; padding: 1px;">
+        <input type="button" value="4">
+        <input type="button" value="5">
+        <input type="button" value="6">
+        <input type="button" value="-">
+    </div>
+
+    <div style="margin:15px; padding: 1px;">
+        <input type="button" value="1">
+        <input type="button" value="2">
+        <input type="button" value="3">
+        <input type="button" value="*">
+    </div>
+
+    <div style="margin: 15px; padding: 1px; colspan: 2">
+        <input type="button" value="0">
+        <input type="button" value="Enter">
+        <input type="button" value="/">
+        <input type="button" value=".">
+    </div>
+    <script>
+        function dis(n)
+        {
+            document.getElementById('result').value+=n
+        }
+        function clr()
+        {
+            document.getElementById('result').value=""
+        }
+    </script>
+    
+</body>
+</html>

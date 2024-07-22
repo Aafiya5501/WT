@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max</title>
+</head>
+<body>
+    <script>
+        let n = Number.parseInt(prompt("Enter the limit:"));
+        let i;
+        var a = [];
+
+        for(i=0;i<n;i++)
+        {
+            a[i]= prompt("Enter numbers:");
+        }
+        max=a[0];
+        for(i=1;i<n;i++)
+        {
+            if(max>a[i])
+            {
+                max = a[i];
+            }
+        }
+        console.log("Maximum number is:"+max);
+    </script>
+</body>
+</html>

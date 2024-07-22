@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		let size=parseInt(prompt("enter the size:"));
+		let array=[];
+		for(i=0;i<size;i++){
+			let a=parseInt(prompt("enter the elements:"));
+			array.push(a);}	
+		
+		for(i=0;i<size;i++){
+			for(j=0;j<size;j++){
+				if(array[i]>array[j]){
+					temp=array[j];
+					array[j]=array[i];
+					array[i]=temp;
+				}
+			}
+		}
+		console.log(array);
+	</script>
+
+</body>
+</html>

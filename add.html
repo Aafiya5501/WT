@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #add{
+            display: block;
+        }
+        #Save{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="name" required>
+    <button onclick="ins()" id="add">Add</button>
+    <button onclick="save()" id="save">Save</button>
+    <div id="data"></div>
+
+    <script>
+
+        a=[]
+
+        function ins(){
+            n=document.getElementById('name')
+            a.push(n.value)
+            disp()
+            n.value=""
+        }
+
+        function disp(){
+            document.getElementById('data').innerHTML=""
+            for(i=0;i<a.length;i++){
+                document.getElementById('data').innerHTML+=a[i]+
+                "<button onclick=\"dlt("+i+")\">Delete</button>"+
+                "<button onclick=\"edit("+i+")\">Edit</button>"+
+                "<br>"
+            }
+        }
+
+        function edit(i){
+            index=i
+            n1=document.getElementById('name')
+            n1.value=a[i]
+            document.getElementById('add').style.display="none"
+            document.getElementById('save').style.display="block"
+        }
+
+        function dlt(i){
+            
+            document.getElementById('add').style.display="block"
+            document.getElementById('save').style.display="none"
+        }
+
+
+
+    </script>
+</body>
+</html>

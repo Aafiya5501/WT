@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table align="center" border="1" style="background-color: pink;">
+        <tr>
+            <td>Name:</td>
+            <td>
+                <input type="textbox" id="nm">
+            </td>
+        </tr>
+        <tr>
+            <td>Enrollment Number:</td>
+            <td>
+                <input type="textbox" id="enr">
+            </td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td>
+                <input type="email" id="em">
+            </td>
+        </tr>
+        <tr>
+            <td>Address:</td>
+            <td>
+                <input type="textbox" id="add">
+            </td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td>
+                <input type="password" id="pw">
+            </td>
+        </tr>
+        <tr>
+            <td>Confirm Password:</td>
+            <td>
+                <input type="password" id="cpw">
+            </td>
+        </tr>
+        <tr>
+            <td>Birth-date:</td>
+            <td>
+                <input type="date" id="bd">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="submit" onclick="req()">
+            </td>
+        </tr>
+    </table>
+    <script>
+        function req()
+        {
+          name=document.getElementById('nm').value;
+            if(name.length<8){
+                alert("Invalid Username")
+
+            }
+           en=document.getElementById('enr').value;
+            p=/23010101[0-9]{3}/
+            re=new RegExp(p)
+            if(!re.test(en)){
+                alert("Invalid Enrollment Number")
+            }
+        
+        
+            email=document.getElementById('em').value;
+
+        
+        
+            pw=document.getElementById('pw').value;
+            p=/[0-9]{1,}[!@#$%^&]{1,}/
+            re=new RegExp(p)
+            if(!re.test(pw))
+            {
+                alert("invalid password")
+             
+            }
+        
+        
+            cp=document.getElementById('cpw').value;
+             if(pw!=cp)
+             {
+                alert("Confirm Password is not same as Password")
+             }
+        
+        
+            age=document.getElementById('bd').value;
+            if(age<18){
+                alert("Invalid Age to Register")
+            }
+            d=document.getElementById('bd').value
+            birthdate=new date(d)
+            today=new date()
+                age=today.getfullyear()-birthdate.getfullyear()
+                if(age<18){
+                    alert("invalid birthdate")
+                }
+
+        
+
+        }
+    
+            
+        
+    </script>
+    
+</body>
+</html>

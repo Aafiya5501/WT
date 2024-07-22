@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<h1>background color</h1>
+
+		<button id="ch" type="button" value="click" >change color</button>
+	<script type="text/javascript">
+		
+	
+			let color=["pink","yellow","blue","white","green"];
+		let index=0;
+			document.getElementById("ch").addEventListener(
+			'click',setInterval(()=>{
+				document.body.style.backgroundColor=color[index];
+				index=(index+1)%color.length;
+			}
+			),200)
+					
+		
+		
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Properties Using JavaScript</title>
+  <style>
+    #myElement {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      margin: 50px auto;
+      text-align: center;
+      line-height: 200px;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="myElement">Click Me!</div>
+
+<script>
+  var element = document.getElementById('myElement');
+
+
+  element.addEventListener('click', function() {
+    element.style.backgroundColor = 'lightgreen';
+    element.textContent = 'Clicked!';
+    element.style.fontSize = '32px';
+  });
+</script>
+
+</body>
+</html>

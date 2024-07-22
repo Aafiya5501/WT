@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator</title>
+	<style type="text/css">
+		#bt1{
+			text-align:right;
+		}
+		input:hover {
+			background-color: lightblue;
+      
+		}
+		
+	</style>
+</head>
+<body>
+	<table border="1" align="center" height="100px" >
+		<tr id=bt1>
+			<td id='ans' colspan="3">
+				<input type="text" value="" id="result" style="width:150px">
+				
+			</td>
+
+			<td id="ans" colspan="4" height="27px">
+				<input type="button" value="c" onclick="clr()" style="width:50px">
+				
+			</td>
+		</tr>
+
+		<tr >
+			<td>
+				<input type="button" value="7" onclick="displayans('7')" style="width: 50px">
+			</td>
+			<td>
+				<input type="button" value="8" onclick="displayans('8')" style="width:50px">
+			</td>
+			<td>
+				<input type="button" value="9" onclick="displayans('9')" style="width:50px">
+			</td>
+			<td>
+				<input type="button" value="+" onclick="displayans('+')" style="width:50px">
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<input type="button" value="4" onclick="displayans('4')" style="width:50px">
+			</td>
+			<td>
+				<input type="button" value="5" onclick="displayans('5')" style="width:50px">
+			</td>
+			<td>
+				<input type="button" value="6" onclick="displayans('6')" style="width:50px">
+			</td>
+			<td>
+				<input type="button" value="-" onclick="displayans('-')" style="width:50px">
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<input type="button" value="1" onclick="displayans('1')" style="width:50px">
+			</td>
+			<td>
+				<input type="button" value="2" onclick= "displayans('2')"style="width:50px">
+			</td>
+			<td>
+				<input type="button" value="3" onclick="displayans('3')" style="width:50px">
+			</td>
+			<td>
+				<input type="button" value="*" onclick="displayans('*')" style="width:50px">
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<input type="button" value="0" onclick="displayans('0')" style="width:50px">
+			</td>
+			<td colspan="2">
+				<input type="button" value="enter" onclick="displayans('enter')"enterstyle="width:50px">
+			</td>
+			<td>
+				<input type="button" value="/" onclick="displayans('/')" style="width:50px">
+			</td>
+
+		</tr>
+	</table>
+	<script type="text/javascript">
+		function displayans(n) {
+			document.getElementById('result').value+=n
+									
+		}
+		function clr() {
+			document.getElementById('result').value=""
+									
+		}
+		
+	</script>
+
+</body>
+</html>
